@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 from sys import argv
 if __name__ == "__main__":
-    print(sum(argv))
+    args = [int(i) for i in argv]
+    print(sum(args))
