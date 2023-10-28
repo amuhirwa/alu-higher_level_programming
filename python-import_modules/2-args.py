@@ -9,4 +9,4 @@ if __name__ == "__main__":
     else:
         print(len(argv) - 1, "arguments:")
         for count, i in enumerate(argv[1:]):
-            print(f'{count+1}: {i}')     
+            print(f'{count+1}: {i}')
