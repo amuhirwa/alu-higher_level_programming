@@ -3,7 +3,7 @@ def uppercase(str):
     for count, i in enumerate(str):
         if i in range(65, 91):
             chars = i
-        elif i in range(97, 123):
+        else:
             chars = chr(ord(i) - 32)
         if count == len(str)-1:
             print("{}".format(chars))
