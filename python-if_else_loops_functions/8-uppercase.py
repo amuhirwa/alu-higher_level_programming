@@ -5,7 +5,7 @@ def uppercase(str):
             chars = i
         elif i in range(97, 123):
             chars = chr(ord(i) - 32)
-        if count ==l en(str)-1:
+        if count == len(str)-1:
             print("{}".format(chars))
         else:
             print("{}".format(chars), end="")
