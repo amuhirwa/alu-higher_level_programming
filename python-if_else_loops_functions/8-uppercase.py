@@ -7,6 +7,4 @@ def uppercase(str):
             chars = i
         if count == len(str)-1:
             print("{}".format(chars))
-        else:
-            print("{}".format(chars), end="")
         print("")
