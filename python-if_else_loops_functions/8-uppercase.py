@@ -5,7 +5,7 @@ def uppercase(str):
             chars = chr(ord(i) - 32)
         else:
             chars = i
-        if i = "":
+        if i == "":
             chars = "\n"
         if count == len(str)-1:
             print("{}".format(chars))
