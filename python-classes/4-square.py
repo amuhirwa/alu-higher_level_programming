@@ -21,3 +21,17 @@ class Square:
     def area(self):
         """Method to calculate area of Square"""
         return self.__size * self.__size
+
+    @property
+    """Getters and setters for the size attribute"""
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        if type(value) is int and value >= 0:
+            self.__size = value
+        elif type(value) is not int:
+            raise TypeError("size must be an integer")
+        else:
+            raise ValueError("size must be >= 0")
