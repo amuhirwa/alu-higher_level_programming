@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module to create a rectangle class"""
+
+
 class Rectangle:
     """Represents a rectangle"""
     def __init__(self, width=0, height=0):
@@ -40,7 +42,8 @@ class Rectangle:
         """Function to calculate area of rectangle"""
         return self.__width * self.__height
 
-
     def perimeter(self):
         """Function to calculate perimeter of rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return (self.__width + self.__height) * 2
