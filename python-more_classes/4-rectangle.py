@@ -51,7 +51,7 @@ class Rectangle:
     def __str__(self):
         rect = ""
         for i in range(self.__height - 1):
-            rect += ("#" * self.__width) + "\n"
+            rect += ("#" * self.__width) + ("\n" * min(self.__width, 0))
         rect += "#" * self.__width
         return rect
 
