@@ -3,6 +3,7 @@
 
 
 def is_same_class(obj, a_class):
+    """Function to check if obj is instance pf certain class"""
     if type(obj) == a_class:
         return True
     return False
