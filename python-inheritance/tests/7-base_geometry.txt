@@ -1,9 +1,12 @@
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
->>> bg = BaseGeometry()
->>> print(bg.area())
+>>> e = BaseGeometry()
+>>> e.area()
+Traceback (most recent call last):
 Exception: area() is not implemented
 >>> e.integer_validator("width", "hi")
+Traceback (most recent call last):
 TypeError: width must be an integer
 >>> e.integer_validator("width", -1)
-TypeError: width must be greater than 0
+Traceback (most recent call last):
+ValueError: width must be greater than 0
 >>> e.integer_validator("width", 8)
