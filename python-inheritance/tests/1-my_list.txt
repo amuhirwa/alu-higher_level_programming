@@ -13,6 +13,8 @@
 [0, 1, 5, 4, 2]
 >>> test.print_sorted()
 [0, 1, 2, 4, 5]
+>>> test
+[0, 1, 5, 4, 2]
 >>> test.append(-6)
 >>> test.print_sorted()
 [-6, 0, 1, 2, 4, 5]
