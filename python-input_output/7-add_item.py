@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Module that adds all arguments to a Python list, and then saves them to a file"""
+
 from sys import argv as arg
 to_json = __import__("5-save_to_json_file.py").save_to_json_file
 from_json = __import__("6-load_from_json_file.py").load_from_json_file
