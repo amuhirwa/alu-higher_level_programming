@@ -10,13 +10,10 @@ class Student:
 
     def to_json(self, attrs=None):
         if type(attrs) is list and all([type(i) == str for i in attrs]):
-            dico = "{"
-            for count, i in enumerate(self.__dict__):
+            dico = {}
+            for i in self.__dict__:
                 if i in attrs:
-                    dico += f"'{i}': '{self.__dict__[i]}'"
-                    if (count + 1) != len(self.__dict__):
-                        dico += ", "
-            dico += "}"
-            return eval(dico)
+                    dico[i] = self.__dict__[i]
+            return dico
 
         return self.__dict__
