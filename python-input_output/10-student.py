@@ -17,6 +17,6 @@ class Student:
                     if (count + 1) != len(self.__dict__):
                         dico += ","
             dico += "}"
-            return dico
+            return dict(dico)
 
         return self.__dict__
