@@ -7,11 +7,10 @@ from_json = __import__("6-load_from_json_file").load_from_json_file
 
 filename = "add_item.json"
 with open(filename, "a+") as f:
-    if len(f.read()) == 0:
+    try:
+        arr = from_json(filename)
+    except:
         arr = []
-        to_json(arr, filename)
-    else:
-        arr = from_json(f)
-        for i in arg:
-            arr.append(i)
-        to_json(arr, filename)
+    for i in arg[1:]:
+        arr.append(i)
+    to_json(arr, filename)
