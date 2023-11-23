@@ -13,10 +13,10 @@ class Student:
             dico = "{"
             for count, i in enumerate(self.__dict__):
                 if i in attrs:
-                    dico += f"'{i}': {self.__dict__[i]}"
+                    dico += f"'{i}': '{self.__dict__[i]}'"
                     if (count + 1) != len(self.__dict__):
-                        dico += ","
+                        dico += ", "
             dico += "}"
-            return dict(dico)
+            return eval(dico)
 
         return self.__dict__
