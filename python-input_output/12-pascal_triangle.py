@@ -3,7 +3,7 @@
 
 
 def pascal_triangle(n):
-    """Function that returns the pascal's triangle
+    """Function that returns pascal's triangle
         Args:
             n(int): number of rows in pascal's triangle
     """
