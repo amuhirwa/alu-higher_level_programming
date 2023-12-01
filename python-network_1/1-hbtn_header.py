@@ -3,5 +3,5 @@
 import urllib.request
 import sys
 
-r = urllib.request.urlopen(sys.argv[1])
-print(r.headers["X-Request-Id"])
+with urllib.request.urlopen(sys.argv[1]) as r:
+    print(r.headers["X-Request-Id"])
