@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module to display body of response or error code"""
+"""
+Module to display body of response or error code
+"""
 from urllib import request, error
 import sys
 
