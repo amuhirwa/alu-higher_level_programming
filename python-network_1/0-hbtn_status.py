@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Prints status of site"""
 import urllib.request
-import sys
 
 url = 'https://intranet.hbtn.io/status'
 headers = {
