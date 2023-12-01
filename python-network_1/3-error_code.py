@@ -2,10 +2,10 @@
 """
 Module to display body of response or error code
 """
-from urllib import request, error
-import sys
 
 if __name__ == "__main__":
+    from urllib import request, error
+    import sys
     url = sys.argv[1]
     req = request.Request(url)
     try:
