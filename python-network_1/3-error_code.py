@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""
-Module to display body of response or error code
+"""A script that:
+- takes in a URL,
+- sends a request to the URL
+- displays the body of the response (decoded in utf-8).
 """
 
 if __name__ == "__main__":
