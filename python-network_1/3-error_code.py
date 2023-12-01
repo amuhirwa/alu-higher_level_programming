@@ -5,8 +5,8 @@ Module displays body of response
 
 
 if __name__ == "__main__":
-    from urllib import request, error
     import sys
+    from urllib import request, error
     
     try:
         with request.urlopen(sys.argv[1]) as r:
