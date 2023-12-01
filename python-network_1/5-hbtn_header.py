@@ -7,5 +7,8 @@ if __name__ == "__main__":
     import sys
 
     respo = requests.get(sys.argv[1])
-    header_var = respo.headers["X-Request-Id"]
-    print(header_var)
+    try:
+        header_var = respo.headers["X-Request-Id"]
+        print(header_var)
+    except:
+        pass
