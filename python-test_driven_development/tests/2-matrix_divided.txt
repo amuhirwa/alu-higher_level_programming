@@ -27,11 +27,6 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
->>> div([2,4,6],[8,10,12]], 2)
-  File "<stdin>", line 1
-    div([2,4,6],[8,10,12]], 2)
-                         ^
-SyntaxError: closing parenthesis ']' does not match opening parenthesis '('
 >>> div([[2,4,6],[8,10,12]], 2)
 [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 >>> div([[2,4,6],[8,10,12]], True)
