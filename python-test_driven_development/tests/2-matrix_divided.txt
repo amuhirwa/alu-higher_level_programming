@@ -43,3 +43,8 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 >>> div([[2,4,6],[8,10,12]], 3)
 [[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]
+>>> div([[2,3],[5,4,1,3]], 2)
+Traceback (most recent call last):
+TypeError: matrix must have each row with the same size
+>>> div([[2,4,6],[8,10,12]], float("inf"))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
