@@ -13,3 +13,11 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 >>> add2(30,-10)
 20
+>>> add2(20.2,20)
+40
+>>> add2(float("nan"), 20)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+>>> add2(float("inf"), 20)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
