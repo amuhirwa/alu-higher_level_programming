@@ -8,11 +8,11 @@ def matrix_divided(matrix, div):
             matrix(list of lists_
             div(float or int)"""
     if type(matrix) != list:
-        raise TypeError("matrix must be a matrix " 
+        raise TypeError("matrix must be a matrix "
                         "(list of lists) of integers/floats")
     if any([type(i) != list for i in matrix]):
-        raise TypeError("""matrix must be a matrix "
-                        "(list of lists) of integers/floats""")
+        raise TypeError("matrix must be a matrix "
+                        "(list of lists) of integers/floats")
     if any(type(j) not in [int, float] for i in matrix for j in i):
         raise TypeError("matrix must be a matrix "
                         "(list of lists) of integers/floats")
