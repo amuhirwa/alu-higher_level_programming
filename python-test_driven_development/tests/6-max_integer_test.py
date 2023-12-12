@@ -16,3 +16,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(items), 2)
         items = []
         self.assertEqual(max_integer(items), None)
+        items = [8, 2, 4, 6]
+        self.assertEqual(max_integer(items), 8)
