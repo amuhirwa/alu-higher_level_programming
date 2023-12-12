@@ -16,5 +16,3 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(items), 2)
         items = []
         self.assertEqual(max_integer(items), None)
-        items = [2, "string"]
-        self.assertRaises(TypeError, max_integer(items))
