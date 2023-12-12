@@ -1,0 +1,13 @@
+>>> ind = __import__("5-text_indentation").text_indentation
+>>> ind("How are you doing")
+How are you doing
+>>> ind("Hello. How are you")
+Hello
+
+How are you
+>>> ind()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'text'
+>>> int(5)
+Traceback (most recent call last):
+TypeError: text must be a string
