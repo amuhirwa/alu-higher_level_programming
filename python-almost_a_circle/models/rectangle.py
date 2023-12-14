@@ -76,7 +76,8 @@ class Rectangle(Base):
     def display(self):
         """Displays # representation"""
         [print() for i in range(self.__x)]
-        [print(" "*self.__y + "#" * self.__width) for i in range(self.__height)]
+        [print(" "*self.__y + "#" * self.__width)\
+ for i in range(self.__height)]
 
     def __str__(self):
         """Shows attributes of rectangle"""
