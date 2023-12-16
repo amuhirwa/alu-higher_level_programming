@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ Module for test Base class """
 import os
+import sys
+sys.path.append("../")
 import unittest
 from models.base import Base
 from models.square import Square
