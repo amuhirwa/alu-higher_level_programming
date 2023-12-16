@@ -11,6 +11,6 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     x = cur.fetchall()
     for i in x:
-        print(x)
+        print(i)
     cur.close()
     connector.close()
