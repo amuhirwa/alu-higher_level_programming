@@ -57,3 +57,115 @@ class TestRectangle(unittest.TestCase):
         """Doc"""
         r1 = Rectangle(4, 2)
         self.assertEqual(r1.area(), 8)
+    def test_display(self):
+        """Doc"""
+        r1 = Rectangle(4, 2)
+        r2 = Rectangle(4, 2, 3)
+        r3 = Rectangle(4, 2, 3, 2)
+        with patch("sys.stdout", new=StringIO()) as seriously:
+            r1.display()
+            self.assertEqual(seriously.getvalue(),
+                             "####\n####\n")
+        with patch("sys.stdout", new=StringIO()) as seriously:
+            r2.display()
+            self.assertEqual(seriously.getvalue(),
+                             "   ####\n   ####\n")
+        with patch("sys.stdout", new=StringIO()) as seriously:
+            r3.display()
+            self.assertEqual(seriously.getvalue(),
+                             "\n\n   ####\n   ####\n")
+
+    def test_to_dictionary(self):
+        """Doc"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(4, 2)
+        self.assertEqual(r1.to_dictionary(),
+                         {'id': 1, 'width': 4, 'height': 2, 'x': 0, 'y': 0})
+
+    def test_update(self):
+        """Doc"""
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(4, 2)
+
+        r1.update()
+        self.assertEqual(r1.id, 1)
+
+        r1.update(89)
+        self.assertEqual(r1.id, 89)
+
+        r1.update(89, 1)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+
+        r1.update(89, 1, 2)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+
+        r1.update(89, 1, 2, 3)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+
+        r1.update(89, 1, 2, 3, 4)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 4)
+
+        r1.update(**{'id': 89})
+        self.assertEqual(r1.id, 89)
+
+        r1.update(**{'id': 89, 'width': 1})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+
+        r1.update(**{'id': 89, 'width': 1, 'height': 2})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+
+        r1.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+
+        r1.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 4)
+
+    def test_create(self):
+        """Doc"""
+
+        r1 = Rectangle.create(**{'id': 89})
+        self.assertEqual(r1.id, 89)
+
+        r1 = Rectangle.create(**{'id': 89, 'width': 1})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+
+        r1 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+
+        r1 = Rectangle.create(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+
+        r1 = Rectangle.create(**{'id': 89, 'width': 1,
+                                 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 4)
+
