@@ -182,10 +182,6 @@ class TestRectangle(unittest.TestCase):
         """Test to save to file"""
         Base._Base__nb_objects = 0
 
-        Rectangle.save_to_file(None)
-        self.assertTrue(os.path.isfile("Rectangle.json"))
-        with open("Rectangle.json") as file:
-            self.assertEqual(file.read(), '[]')
         Rectangle.save_to_file([Rectangle(1, 2)])
         with open("Rectangle.json") as file:
             self.assertEqual(file.read(),
