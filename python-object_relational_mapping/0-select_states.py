@@ -9,6 +9,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states")
     x = cursor.fetchall()
     for i in x:
-        print(x)
+        print(i)
     cursor.close()
     connector.close()
