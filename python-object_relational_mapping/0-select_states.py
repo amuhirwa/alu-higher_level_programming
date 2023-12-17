@@ -1,16 +1,28 @@
 #!/usr/bin/python3
-"""Module to display all states"""
+"""
+    Create a script that lists all states from a database hbtn_0e_0_usa
+"""
+
 import sys
-import MySQLdb as mysql
+import MySQLdb
+
 
 if __name__ == "__main__":
-    connector = mysql.connect(host="localhost", port=3306,
-                              user=sys.argv[1], passwd=sys.argv[2],
-                              db=sys.argv[3])
-    cursor = connector.cursor()
-    cursor.execute("SELECT * FROM states")
-    x = cursor.fetchall()
-    for i in x:
-        print(i)
-    cursor.close()
-    connector.close()
+    db_conn = MySQLdb.connect(
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
+        host='localhost',
+        port=3306
+    )
+
+    cur = db_conn.cursor()
+
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    states = cur.fetchall()
+
+    for state in states:
+        print(state)
+
+    cur.close()
+    db_conn.close()
