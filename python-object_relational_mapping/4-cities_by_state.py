@@ -8,8 +8,7 @@ if __name__ == "__main__":
                               user=sys.argv[1], passwd=sys.argv[2],
                               db=sys.argv[3])
     cur = connector.cursor()
-    cur.execute("SELECT * FROM states"
-                "INNER JOIN cities"
+    cur.execute("SELECT * FROM states INNER JOIN cities "
                 "ON states.id=cities.state_id"
                 " ORDER BY cities.id ASC")
     x = cur.fetchall()
