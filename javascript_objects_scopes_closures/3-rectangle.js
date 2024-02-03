@@ -13,3 +13,4 @@ class Rectangle {
     }
   }
 }
+exports = Rectangle;
